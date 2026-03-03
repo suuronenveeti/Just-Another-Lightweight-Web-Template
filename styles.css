@@ -1,17 +1,44 @@
-img{
-
-width: 95vw;
-
+/* box-malli */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-video{
-
-width: 95vw;
-
+/* body */
+html,
+body {
+  margin: 0;
+  padding: 1rem;
+  height: 100%;
 }
 
-body{
+/* teksti wrap */
+p,
+div,
+span {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
 
- background-color: rgb(255, 255, 255);
+/* otsikot ja kappaleet */
+h1, h2, h3, h4, h5, h6 {
+  margin-bottom: 0.5rem;
+}
 
+p {
+  margin-bottom: 0.75rem;
+}
+
+/* responsive kuvat ja media */
+img,
+video,
+canvas,
+svg {
+  width: 100%;          /* täyttää vanhemman koon */
+  max-width: 800px;     /* isoilla näytöillä ei liian suuri */
+  height: auto;         /* säilyttää kuvasuhteen */
+  display: block;
+  margin-bottom: 1rem;  /* välit alla */
 }
