@@ -15,23 +15,19 @@ async function checkFile(file, type, element = null) {
         if (old && old !== lastMod) {
             console.log("Muuttui:", file);
 
-            // HTML ja JS → turvallinen reload
             if (type === "html" || type === "js") {
                 location.reload();
                 return;
             }
 
-            // CSS → päivitä ilman reloadia
             if (type === "css" && element) {
                 element.href = file + "?v=" + Date.now();
             }
 
-            // Kuva → päivitä
             if (type === "img" && element) {
                 element.src = file + "?v=" + Date.now();
             }
 
-            // Video → päivitä ja säilytä toistoaika
             if (type === "video" && element) {
                 const currentTime = element.currentTime;
                 const wasPlaying = !element.paused;
@@ -55,28 +51,23 @@ async function checkFile(file, type, element = null) {
 
 async function loop() {
 
-    // HTML
     await checkFile(getCurrentHTML(), "html");
 
-    // CSS
     document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
         const file = link.getAttribute("href").split("?")[0];
         checkFile(file, "css", link);
     });
 
-    // JS
     document.querySelectorAll('script[src]').forEach(script => {
         const file = script.getAttribute("src").split("?")[0];
         checkFile(file, "js");
     });
 
-    // Kuvat
     document.querySelectorAll('img').forEach(img => {
         const file = img.getAttribute("src").split("?")[0];
         checkFile(file, "img", img);
     });
 
-    // Videot
     document.querySelectorAll('video').forEach(video => {
         const file = video.getAttribute("src")?.split("?")[0];
         if (file) checkFile(file, "video", video);
