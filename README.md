@@ -16,7 +16,7 @@ However, attribution is required under the following terms:
 3. Provide a link back to the author's profile.
 
 ## Author
-[suuronenveeti](https://github.com)
+suuronenveeti - https://github.com/suuronenveeti
 
 ---
-© 2026 suuronenveeti | https://github.com
+© 2026 suuronenveeti
