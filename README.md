@@ -1,4 +1,4 @@
-# Template-03-2026
+# Just-Another-Lightweight-Web-Template
 
 A web template created by suuronenveeti.
 
