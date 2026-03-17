@@ -1,6 +1,6 @@
-# Just-Another-Lightweight-Web-Template
+# Just Another Lightweight Web Template
 
-A web template created by suuronenveeti.
+JALWT (Just Another Lightweight Web Template) is a web template created by suuronenveeti.
 
 ---
 
