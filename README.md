@@ -17,7 +17,7 @@ https://suuronenveeti.github.io/Just-Another-Lightweight-Web-Template/
 3. **Styles**: Modify `css/styles.css` to change colors and fonts.
 4. **Assets**: Put your images and videos into the `/assets` folder.
 5. **Linking**: When adding images, use paths like `<img src="assets/your-image.jpg">`.
-6. **Structure**: Always use the index.html as homepage and duplicate example.html with other name as pages with link in index.html.
+6. **Structure**: Always use the `index.html` as homepage and duplicate `example.html` with other name as pages with link in `index.html`.
 
 ---
 
