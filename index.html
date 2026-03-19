@@ -6,8 +6,15 @@
     <title>Just Another Lightweight Web Template</title>
     <meta name="description" content="Just Another Lightweight Web Template">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="js/scripts.js" defer></script>
+    <script>
+        if (localStorage.getItem("theme") === "dark") {
+            document.documentElement.classList.add("dark-mode");
+        }
+    </script>
 </head>
 <body>
+    <!-- keep this --><button id="theme-toggle">Toggle theme</button>
     <!-- keep h1 first(optional, recommended) --><h1>This is my website template.</h1>
     <!-- add your content here -->
     <p>This template is designed for simple and responsive websites. Click the links below for other pages.</p>

@@ -6,18 +6,29 @@
   font-style: normal;
 }
 
-:root {
+html {
   --primary-bg-color: rgb(255, 255, 255);
   --primary-text-color: rgb(0, 0, 0);
   --primary-hover-color: rgba(0, 0, 0, 0.05);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --primary-bg-color: rgb(0, 0, 0);
-    --primary-text-color: rgb(255, 255, 255);
-    --primary-hover-color: rgba(255, 255, 255, 0.1);
-  }
+html.dark-mode {
+  --primary-bg-color: rgb(0, 0, 0);
+  --primary-text-color: rgb(255, 255, 255);
+  --primary-hover-color: rgba(255, 255, 255, 0.1);
+}
+
+button {
+  background-color: var(--primary-text-color);
+  color: var(--primary-bg-color);
+  border-radius: 15px;
+  height: 30px;
+  width: auto;
+  max-width: 100px;
+  border: 0px;
+  font-family: inherit;
+  cursor: pointer;
+  margin-bottom: 20px;
 }
 
 a {
